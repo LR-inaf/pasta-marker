@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pastamarkers"
+version = "0.1.0"
+description = "Your project description here"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [ 
+    {include = "pastamarkers"},
+]
+include = [
+    { path = "data", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.21.2"
+matplotlib = "^3.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
