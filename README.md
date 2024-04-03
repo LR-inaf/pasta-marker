@@ -1,9 +1,30 @@
 # pastamarkers
 This is the amazing **pasta marker project** that will allow you to use a lot of the famous italian pasta types.
 
-See `\test` folder for examples.
+## Installation
+The recommended way to install the stable version of pastamarkers is using pip
+```
+pip install pastamarkers
+```
 
-See below for the currently available markers. Alternatively, you can open an Issue if you would like new pasta types to be included.
+## Usage
+The first thing that we need to do is import the necessary modules:
+```
+import matplotlib.pyplot as plt
+from pastamarkers import markers
+```
+Then, we can directly pass the markers to matplotlib's functions.
+```
+plt.scatter(x, y, marker=markers.tortellini, s=500, linewidth=0.2)
+```
+Note: play with `size` and `linewidth` parameters for a perfect pasta marker!
+
+Below you can see the supported data types. Please open an Issue if you would like new pasta types to be included!
+
+## Examples
+See also the `\test` folder for working examples.
+
+
 
 
 ## Citation
