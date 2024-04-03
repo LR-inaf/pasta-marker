@@ -7,7 +7,6 @@ See test case in \test folder for usage.
 
 If you find this code useful in your research, please cite the following paper ([ADS](https://ui.adsabs.harvard.edu/abs/2024arXiv240320314P), [arXiv](https://arxiv.org/abs/2403.20314)):
 
-
     @ARTICLE{2024arXiv240320314P,
            author = {{PASTA Collaboration}},
             title = "{pastamarkers: astrophysical data visualization with pasta-like markers}",
