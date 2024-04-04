@@ -11,7 +11,7 @@ import pathlib
 import numpy as np
 from svgpath2mpl import parse_path
 
-SVG_PATH = pathlib.Path(__file__).parent / "./markers.svg"
+SVG_PATH = pathlib.Path(__file__).parent / "./markers_dev.svg"
 
 
 def main():
@@ -64,3 +64,7 @@ from numpy import array, uint8
             f"{key} = {path}\n\n"  # relying on the matplotlib.path.Path repr
         )
     return output
+
+
+if __name__ == "__main__":
+    main()
