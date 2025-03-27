@@ -1,0 +1,163 @@
+colormaps:
+    pomodoro: [
+        xkcd:dark red,
+        xkcd:deep red,
+        xkcd:scarlet,
+        xkcd:tomato,
+        xkcd:sand brown,
+        xkcd:sand,
+        xkcd:dull yellow,
+        xkcd:gold,
+    ]
+    pesto: [
+        xkcd:forest,
+        xkcd:emerald green,
+        xkcd:kelly green,
+        xkcd:apple green,
+        xkcd:sand,
+        xkcd:dull yellow,
+        xkcd:dark yellow,
+    ]
+    cacio_e_pepe: [
+        black,
+        xkcd:brown gray,
+        xkcd:sand,
+        xkcd:light tan,
+        xkcd:off white,
+    ]
+    radicchio: [
+        xkcd:maroon,
+        xkcd:red wine,
+        xkcd:deep rose,
+        xkcd:light rose,
+        xkcd:very light pink,
+        white,
+        xkcd:very light pink,
+        xkcd:buff,
+        xkcd:dull yellow,
+        xkcd:dark yellow,
+    ]
+    norma: [
+        xkcd:eggplant,
+        xkcd:rich purple,
+        xkcd:scarlet,
+        xkcd:tomato,
+        xkcd:blush,
+        white,
+        xkcd:light beige,
+        xkcd:dull yellow,
+        xkcd:dark yellow,
+        xkcd:emerald green,
+        xkcd:forest,
+    ]
+    ragu: [
+        xkcd:brown,
+        xkcd:chestnut,
+        xkcd:dark red,
+        xkcd:deep red,
+        xkcd:scarlet,
+        xkcd:vermillion,
+        xkcd:dark yellow,
+        xkcd:dull yellow,
+        xkcd:buff,
+    ]
+    carbonara: [
+        xkcd:cerise,
+        xkcd:pink,
+        xkcd:baby pink,
+        xkcd:pale salmon,
+        xkcd:light orange,
+        xkcd:yellow orange,
+        xkcd:goldenrod,
+        xkcd:dull yellow,
+        xkcd:buff,
+    ]
+    funghi: [
+        xkcd:chocolate brown,
+        xkcd:brown,
+        xkcd:earth,
+        xkcd:dark yellow,
+        xkcd:dull yellow,
+        xkcd:buff,
+    ]
+    puttanesca: [
+        xkcd:dark maroon,
+        xkcd:mahogany,
+        xkcd:dark red,
+        xkcd:deep red,
+        xkcd:scarlet,
+        xkcd:light maroon,
+        xkcd:camo,
+        xkcd:avocado,
+        xkcd:dark yellow,
+        xkcd:dull yellow,
+        xkcd:buff,
+    ]
+    pomodoro_p: [
+        xkcd:gold, 
+        xkcd:dull yellow, 
+        xkcd:sand, 
+        xkcd:sand brown, 
+        xkcd:tomato, 
+        xkcd:scarlet, 
+        xkcd:deep red, 
+        xkcd:dark red, 
+        xkcd:off white
+    ]
+    pesto_p: [
+        xkcd:dark yellow, 
+        xkcd:dull yellow, 
+        xkcd:sand, 
+        xkcd:apple green, 
+        xkcd:kelly green, 
+        xkcd:emerald green, 
+        xkcd:forest, 
+        xkcd:off white
+    ]
+    ragu_p: [
+        xkcd:buff, 
+        xkcd:dull yellow, 
+        xkcd:dark yellow, 
+        xkcd:vermillion, 
+        xkcd:scarlet, 
+        xkcd:deep red, 
+        xkcd:dark red, 
+        xkcd:chestnut, 
+        xkcd:brown, 
+        xkcd:off white
+    ]
+    carbonara_p: [
+        xkcd:buff, 
+        xkcd:dull yellow, 
+        xkcd:goldenrod, 
+        xkcd:yellow orange, 
+        xkcd:light orange, 
+        xkcd:pale salmon, 
+        xkcd:baby pink, 
+        xkcd:pink, 
+        xkcd:cerise, 
+        xkcd:off white
+    ]
+    funghi_p: [
+        xkcd:buff, 
+        xkcd:dull yellow, 
+        xkcd:dark yellow, 
+        xkcd:earth, 
+        xkcd:brown, 
+        xkcd:chocolate brown, 
+        xkcd:off white
+    ]
+    puttanesca_p: [
+        xkcd:buff, 
+        xkcd:dull yellow, 
+        xkcd:dark yellow, 
+        xkcd:avocado, 
+        xkcd:camo, 
+        xkcd:light maroon, 
+        xkcd:scarlet, 
+        xkcd:deep red, 
+        xkcd:dark red, 
+        xkcd:mahogany, 
+        xkcd:dark maroon, 
+        xkcd:off white
+    ]

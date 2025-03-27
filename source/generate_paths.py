@@ -10,8 +10,15 @@ import xml.etree.ElementTree as etree
 import pathlib
 import numpy as np
 from svgpath2mpl import parse_path
+from matplotlib.path import Path
+import shapely
+from itertools import combinations
+import pickle
+import yaml
 
-SVG_PATH = pathlib.Path(__file__).parent / "./markers.svg"
+SVG_PATH = pathlib.Path(__file__).parent / "./markers_dev.svg"
+SALSA_PATH = pathlib.Path(__file__).parent / "./salsa.yaml"
+# SVG_PATH = pathlib.Path(__file__).parent / "./pasta-svgrepo-com.svg"
 
 
 def main():
@@ -28,14 +35,68 @@ def main():
 
     # Process each path element
     marks = {
-        path_elem.attrib["id"]: process_path(path_elem)
+        # path_elem.attrib["id"]: process_path(path_elem)
+        path_elem.attrib["id"]: generate_filled_marker(process_path(path_elem))
         for path_elem in path_elems
     }
 
     # Write the output
-    outpath = pathlib.Path(__file__).parent.parent / "pastamarkers/markers.py"
-    with open(outpath, "wt") as outf:
-        outf.write(generate_output(marks))
+    # outpath = pathlib.Path(__file__).parent.parent / "pastamarkers/markers.py"
+    outpath = pathlib.Path(__file__).parent.parent / "pastamarkers/markers.pkl"
+    # with open(outpath, "wt") as outf:
+    with open(outpath, "wb") as outf:
+        # outf.write(generate_output(marks))
+        pickle.dump(marks, outf)
+
+    # generate also salsa from yaml file
+    # salsa_yaml_file = pathlib.Path(__file__).parent.parent / "pastamarkers/salsa.yaml"
+    with open(SALSA_PATH, "r") as file:
+        salsa = yaml.load(file, Loader=yaml.FullLoader)
+
+    outpath = pathlib.Path(__file__).parent.parent / "pastamarkers/salsa.pkl"
+    # with open(outpath, "wt") as outf:
+    with open(outpath, "wb") as outf:
+        # outf.write(generate_output(marks))
+        pickle.dump(salsa, outf)
+
+
+def generate_filled_marker(marker):
+    exploded_polygons_marker = [shapely.Polygon(el) for el in marker.to_polygons()]
+
+    new_polygons = []
+    new_codes = []
+    for poly in exploded_polygons_marker:
+        for i, (x, y) in enumerate(np.array(poly.exterior.coords.xy).T):
+            if i == 0:
+                new_codes.append(1)
+            else:
+                new_codes.append(2)
+            new_polygons.append([float(x), float(y)])
+        new_codes.pop()
+        new_codes.append(79)
+
+    for pol1, pol2 in combinations(exploded_polygons_marker, 2):
+        if pol1.contains(pol2):
+            for i, (x, y) in enumerate(np.array(pol2.exterior.coords.xy).T):
+                if i == 0:
+                    new_codes.append(1)
+                else:
+                    new_codes.append(2)
+                new_polygons.append([float(x), float(y)])
+            new_codes.pop()
+            new_codes.append(79)
+        elif pol2.contains(pol1):
+            for i, (x, y) in enumerate(np.array(poly.exterior.coords.xy).T):
+                if i == 0:
+                    new_codes.append(1)
+                else:
+                    new_codes.append(2)
+                new_polygons.append([float(x), float(y)])
+            new_codes.pop()
+            new_codes.append(79)
+
+    new_marker = Path(new_polygons, new_codes)
+    return new_marker
 
 
 def process_path(path_elem):
@@ -60,7 +121,9 @@ from numpy import array, uint8
 
 """
     for key, path in marks.items():
-        output += (
-            f"{key} = {path}\n\n"  # relying on the matplotlib.path.Path repr
-        )
+        output += f"{key} = {path}\n\n"  # relying on the matplotlib.path.Path repr
     return output
+
+
+if __name__ == "__main__":
+    main()
