@@ -16,7 +16,7 @@ from itertools import combinations
 import pickle
 import yaml
 
-SVG_PATH = pathlib.Path(__file__).parent / "./markers.svg"
+SVG_PATH = pathlib.Path(__file__).parent / "./markers_dev.svg"
 SALSA_PATH = pathlib.Path(__file__).parent / "./salsa.yaml"
 # SVG_PATH = pathlib.Path(__file__).parent / "./pasta-svgrepo-com.svg"
 
