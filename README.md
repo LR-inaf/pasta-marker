@@ -15,11 +15,11 @@ pip install pastamarkers
 Import the necessary modules:
 ```
 import matplotlib.pyplot as plt
-from pastamarkers import markers
+from pastamarkers import pasta, salsa
 ```
-Then, you can directly pass the desired marker to the matplotlib argument:
+Then, you can directly pass the desired pasta (i.e. marker) and salsa (i.e. colormaps) to the matplotlib argument:
 ```
-plt.scatter(x, y, marker=markers.tortellini, s=500, linewidth=0.2)
+plt.scatter(x, y, z, marker=pasta.penne, c=z, cmap=salsa.pesto, s=500, linewidth=0.2)
 ```
 Note: play with `size` and `linewidth` parameters for a perfect pasta marker!
 
