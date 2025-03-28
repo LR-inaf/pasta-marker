@@ -2,14 +2,16 @@ import os
 import pickle
 from collections import namedtuple
 from matplotlib.colors import LinearSegmentedColormap
-from .utils import *
+from utils import *
 
 __ROOT__ = os.path.dirname(__file__)
 
-dir_data = __ROOT__ + "/data/"
+# dir_data = __ROOT__ + "/data/"
+dir_data = os.path.join(__ROOT__, "data")
 
 # loading _markers
-pasta_file_path = __ROOT__ + r"\pasta.pkl"
+# pasta_file_path = __ROOT__ + r"\pasta.pkl"
+pasta_file_path = os.path.join(__ROOT__, "pasta.pkl")
 with open(pasta_file_path, "rb") as pkl_file:
     _markers = pickle.load(pkl_file)
 
@@ -17,7 +19,7 @@ _Marker = namedtuple("Marker", [key for key in _markers.keys()])
 pasta = _Marker(*_markers.values())
 
 # loading salsa
-salsa_file_path = __ROOT__ + r"\salsa.pkl"
+salsa_file_path = os.path.join(__ROOT__, "salsa.pkl")
 with open(salsa_file_path, "rb") as pkl_file:
     _cmaps = pickle.load(pkl_file)["colormaps"]
 
