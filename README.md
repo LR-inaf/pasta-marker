@@ -19,9 +19,20 @@ from pastamarkers import pasta, salsa
 ```
 Then, you can directly pass the desired pasta (i.e. marker) and salsa (i.e. colormaps) to the matplotlib argument:
 ```
-plt.scatter(x, y, z, marker=pasta.penne, c=z, cmap=salsa.pesto, s=500, linewidth=0.2)
+plt.scatter(x, y, marker=pasta.penne, c=z, cmap=salsa.pesto, s=500, linewidth=0.2)
 ```
 Note: play with `size` and `linewidth` parameters for a perfect pasta marker!
+
+You can also top your pastaplot with parmesan chees by adding ```_p``` to your colormaps.
+Alternatively, you may use the function ```add_parmesan``` to _sprinkle_ a bit of chees on your pastamarkers
+
+```
+from pastamarkers import utils
+
+fig, ax = plt.subplots(1,1)
+ax.scatter(x, y, s=300, c=z, marker=pasta.tagliatelle, s=500, cmap=salsa.ragu, linewidth=0.2)
+utils.add_parmesan(ax, N_cheese_flakes = 10000)
+```
 
 Below you can see the supported data types. Please open an Issue if you would like new pasta types to be included!
 

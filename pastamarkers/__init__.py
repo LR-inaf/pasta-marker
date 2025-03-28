@@ -24,6 +24,7 @@ with open(salsa_file_path, "rb") as pkl_file:
     _cmaps = pickle.load(pkl_file)["colormaps"]
 
 _Cmaps = namedtuple("Cmaps", [key for key in _cmaps.keys()])
+
 salsa = _Cmaps(
-    *[LinearSegmentedColormap.from_list(key, val) for key, val in _cmaps.items()]
+    *[LinearSegmentedColormap.from_list(key, val[::-1]) for key, val in _cmaps.items()]
 )
