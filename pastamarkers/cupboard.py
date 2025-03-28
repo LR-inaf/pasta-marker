@@ -1,6 +1,7 @@
 from matplotlib.pyplot import Axes
 import numpy as np
 
+# This cupboard contains the toppings for pasta.
 
 def add_parmesan(ax: Axes, amount: int = 10000) -> Axes:
     """Add parmesan to the Axes.
