@@ -4,7 +4,10 @@ from collections import namedtuple
 from matplotlib.colors import LinearSegmentedColormap
 from utils import *
 
+import sys
+
 __ROOT__ = os.path.dirname(__file__)
+sys.path.append(__ROOT__)
 
 # dir_data = __ROOT__ + "/data/"
 dir_data = os.path.join(__ROOT__, "data")
