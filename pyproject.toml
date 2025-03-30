@@ -1,20 +1,25 @@
 [tool.poetry]
 name = "pastamarkers"
-version = "0.1.0"
-description = "Your project description here"
-authors = ["Your Name <your.email@example.com>"]
+version = "1.0.0"
+description = "astrophysical data visualization with pasta-like markers"
+authors = ["Luca Rosignoli <luca.rosignoli@inaf.it>",
+           "Nicola Borghi <nicola.borghi6@unibo.it>",
+           "Giulia Papini <giulia.papini@inaf.it>",]
 readme = "README.md"
 packages = [ 
     {include = "pastamarkers"},
 ]
 include = [
-    { path = "data", format = "sdist" },
+    { path = "source", format = "sdist" },
+    { path = "test", format = "sdist" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 numpy = "^1.21.2"
 matplotlib = "^3.4.3"
+svgpath2mpl = "^0.2.4"
+
 
 [build-system]
 requires = ["poetry-core"]
