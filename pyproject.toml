@@ -1,11 +1,24 @@
 [tool.poetry]
 name = "pastamarkers"
-version = "1.0.0"
+version = "1.0.1"
 description = "astrophysical data visualization with pasta-like markers"
 authors = ["Luca Rosignoli <luca.rosignoli@inaf.it>",
            "Nicola Borghi <nicola.borghi6@unibo.it>",
            "Giulia Papini <giulia.papini@inaf.it>",]
 readme = "README.md"
+repository = "https://github.com/LR-inaf/pasta-marker"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
 packages = [ 
     {include = "pastamarkers"},
 ]
@@ -15,10 +28,10 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-numpy = "^1.21.2"
+python = "^3.10"
+numpy = "2.2.0"
 matplotlib = "^3.4.3"
-svgpath2mpl = "^0.2.4"
+svgpath2mpl = "1.0.0"
 
 
 [build-system]
