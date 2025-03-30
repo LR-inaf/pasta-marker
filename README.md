@@ -27,11 +27,11 @@ You can also top your pastaplot with parmesan chees by adding ```_p``` to your c
 Alternatively, you may use the function ```add_parmesan``` to _sprinkle_ a bit of chees on your pastamarkers
 
 ```
-from pastamarkers import utils
+from pastamarkers import cupboard
 
 fig, ax = plt.subplots(1,1)
-ax.scatter(x, y, s=300, c=z, marker=pasta.tagliatelle, s=500, cmap=salsa.ragu, linewidth=0.2)
-utils.add_parmesan(ax, N_cheese_flakes = 10000)
+ax.scatter(x, y, s=500, c=z, marker=pasta.tagliatelle, cmap=salsa.ragu, linewidth=0.2)
+cupboard.add_parmesan(ax, amount = 10000)
 ```
 
 Below you can see the supported data types. Please open an Issue if you would like new pasta types to be included!
