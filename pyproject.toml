@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pastamarkers"
-version = "1.0.1"
+version = "1.0.2"
 description = "astrophysical data visualization with pasta-like markers"
 authors = ["Luca Rosignoli <luca.rosignoli@inaf.it>",
            "Nicola Borghi <nicola.borghi6@unibo.it>",
@@ -29,7 +29,7 @@ include = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-numpy = "2.2.0"
+numpy = "^2.0.0"
 matplotlib = "^3.4.3"
 svgpath2mpl = "1.0.0"
 
