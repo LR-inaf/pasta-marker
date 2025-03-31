@@ -4,6 +4,8 @@ This is the amazing **pasta marker project**, which allows you to use the famous
 <img src="https://raw.githubusercontent.com/LR-inaf/pasta-marker/nic/source/pastamarkers_logo.svg" alt="pastamarkers logo" width="100%">
 
 
+## Prerequisites:
+- Python 3.10
 
 ## Installation
 The code can be quikly installed from Pypi:
